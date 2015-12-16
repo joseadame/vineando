@@ -1,0 +1,126 @@
+﻿blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Fin Reset CSS*/
+
+body {
+	line-height: 1;
+	font-family: Calibri, Arial, Helvetica, Verdana;
+	font-size: 17px;
+	background-color: #F2F2F2;
+}
+#wrapper {
+	width: 920px;
+	margin: 40px auto;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 15px;
+	line-height: 1.1em;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+
+p {
+	margin-bottom: 13px;
+}
+
+/* Puntuacion */
+.puntuacion {
+	cursor: pointer;
+	margin-right: 5px;
+	clear: both;
+	display: block;
+	
+	overflow: visible;
+}
+.puntuacion:after {
+	content: '.';
+	display: block;
+	height: 0;
+	width: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.estrella {
+	float: left;
+	width: 35px;
+	height: 35px;
+	overflow: hidden;
+	display: inline-block;
+	text-indent: -999em;
+	cursor: pointer;
+	margin-top: 1em;
+}
+.estrella_izq,
+.estrella_der {
+	width: 18px
+}
+
+.estrella,
+.estrella a {
+	background: url('./images/estrella_sprite.png') no-repeat 0 0px;
+}
+
+.estrella_izq,
+.estrella_izq a {
+	background: url('./images/estrella_sprite_izq.png') no-repeat 0 0px;
+}
+
+.estrella_der,
+.estrella_der a {
+	background: url('./images/estrella_sprite_der.png') no-repeat 0 0px;
+}
+	
+.estrella a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: 0 0px;
+}
+
+div.puntuacion div.on a {
+	background-position: 0px -45px;
+}
+
+div.puntuacion div.hover a,
+div.puntuacion div a:hover {
+	background-position: 0px -90px;
+}
+
+#num_votos {
+	float: right;
+	clear:both;
+	margin: 5px;
+}
+
+#num_votos p {
+	font-size: 14px;
+}
+
+/* Fin Puntuación */

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.Seguimiento" table="public.Tseguimiento">
+    <id column="idseguimiento" name="idseguimiento">
+      <generator class="identity"/>
+    </id>
+    <property column="idusuario" name="idusuario" type="integer"/>
+    <property column="idamigo" name="idamigo" type="integer"/>
+    <property column="fecha" name="fecha" type="timestamp"/>
+   </class>
+</hibernate-mapping>

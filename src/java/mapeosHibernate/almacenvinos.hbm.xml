@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.AlmacenVinos" table="public.Talmacenvinos">
+    <composite-id class="tempranillo.entidades.AlmacenVinosPK" name="claveprimaria" unsaved-value="none">
+      <key-property column="idvino" name="idvino" type="int"/>
+      <key-property column="idbodega" name="idbodega" type="int"/>
+    </composite-id>
+    <property column="fecha" name="fecha" type="string"/>
+  </class>
+</hibernate-mapping>

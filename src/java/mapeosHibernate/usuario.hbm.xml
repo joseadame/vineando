@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.Usuario" table="public.Tusuarios">
+    <id column="idusuario" name="id">
+      <generator class="identity"/>
+    </id>
+    <property column="alias" name="alias" type="string"/>
+    <property column="password" name="password" type="string"/>
+    <property column="nombre" name="nombre" type="string"/>
+    <property column="apellidos" name="apellidos" type="string"/>
+    <property column="email" name="email" type="string"/>
+    <property column="puntuacion" name="puntuacion" type="integer"/>
+    <property column="rango" name="rango" type="string"/>
+    <property column="rutaavatar" name="rutaAvatar" type="string"/>
+    <property column="tipoperfil" name="tipoperfil" type="string"/>
+    <property column="lastlogin" name="lastlogin" type="date"/>
+    <property column="fecharegistro" name="fecharegistro" type="date"/>
+    
+    
+  </class>
+</hibernate-mapping>

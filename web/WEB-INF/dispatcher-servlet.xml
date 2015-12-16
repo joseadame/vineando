@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <context:component-scan base-package="tempranillo.controllers"/>
+
+    <bean id="urlMapping"   class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                <prop key="registro.htm">verregistroController</prop>
+                <prop key="busquedausuario.htm">BusquedausuController</prop>
+                <prop key="altaVino.htm">vinosController</prop>
+                <prop key="loginusuario.htm">verloginController</prop>
+                <prop key="buscarVino.htm">buscarVinoController</prop>
+                <prop key="busquedavinoID.htm">buscarVinoIDController</prop>
+                <prop key="busquedaBodega.htm">buscarVinosBodega</prop>
+                <prop key="nuevaBodega.htm">nuevaBodegaController</prop>
+                <prop key="altaBodega.htm">altaBodegaController</prop>
+                <prop key="altavino.htm">altaVinoBodegaController</prop>
+                <prop key="borrarBodega.htm">borrarBodegaController</prop>
+                <prop key="borrarVinoBodega.htm">borrarVinoBodegaController</prop>
+                <prop key="cambioNombreBodega.htm">cambiarNombreBodegaController</prop>
+                <prop key="actuVino.htm">actualizarVinoController</prop>
+                <prop key="verPerfilUsuario.htm">inicializarPerfilUsuario</prop>
+                <prop key="cambiarDatosUsuario.htm">cambiarDatosUsuario</prop>
+                <prop key="cambiarPassword.htm">cambiarPassword</prop>
+                <prop key="makeloginUsuario.htm">makeloginController</prop>
+                <prop key="makeregistro.htm">makeregistroController</prop>
+                <prop key="perfilUsuario.htm">verperfilController</prop>
+                <prop key="checkin.htm">checkinController</prop>
+                <prop key="enviarcomentario.htm">enviarComentarioController</prop>
+                <prop key="puntuarComentario.htm">puntuarComentarioController</prop>
+                <prop key="wishlist.htm">wishListController</prop>
+                <prop key="buscarciudad.htm">buscarCiudadController</prop>
+                <prop key="addamigo.htm">addAmigoController</prop>
+                <prop key="aceptarsolicitud.htm">aceptarSolicitudController</prop>
+                <prop key="ignorarsolicitud.htm">ignorarSolicitudController</prop>
+                <prop key="logout.htm">logoutController</prop>
+                <prop key="fileupload.htm">fileuploadController</prop>
+                <prop key="vinoscatados.htm">vinosCatadosController</prop>
+                <prop key="verwishlist.htm">verwishListController</prop>
+                <prop key="zona.htm">buscarZonaController</prop>
+                <prop key="tipovino.htm">buscarTipoVinoController</prop>
+                <prop key="dejarseguir.htm">dejarSeguirUsuarioController</prop>
+                <prop key="checkingVino.htm">checkinVinoController</prop>
+                <prop key="reportar.htm">reportarErrorController</prop>
+                <prop key="getLogros.htm">getLogrosUsuarioController</prop>
+                <prop key="paginarNotificacion.htm">paginarController</prop>
+                <prop key="paginarGlobal.htm">PaginarGlobalController</prop>
+                <prop key="global.htm">ActualizacionesGlobalesController</prop>
+                <prop key="eventos.htm">MostrarEventosController</prop>
+                <prop key="eventosCiudad.htm">mostrarEventosCiudadController</prop>
+                <prop key="descEvento.htm">InfoEventoController</prop>
+            </props>       
+        </property>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="5242880" />
+    </bean>
+    <bean id="checkinVinoController" class="tempranillo.controllers.checkinVinoController">
+    </bean>
+    
+    <bean id="getLogrosUsuarioController" class="tempranillo.controllers.getLogrosUsuarioController">
+    </bean>
+
+    <bean id="MostrarEventosController" class="tempranillo.controllers.mostrarEventosController">
+    </bean>
+    
+    <bean id="mostrarEventosCiudadController" class="tempranillo.controllers.mostrarEventosCiudadController">
+      
+    </bean>
+    
+    <bean id="InfoEventoController" class="tempranillo.controllers.mostrarInfoEventoController">
+    </bean>
+    
+    <bean id="ActualizacionesGlobalesController" class="tempranillo.controllers.ActualizacionesGlobalesController">
+    </bean>
+     
+     <bean id="PaginarGlobalController" class="tempranillo.controllers.PaginarGlobalController">
+    </bean>
+     
+     <bean id="dejarSeguirUsuarioController" class="tempranillo.controllers.dejarSeguirUsuarioController">
+    </bean>
+    <bean id="buscarZonaController" class="tempranillo.controllers.buscarVinosZonaController">
+    </bean>
+    <bean id="buscarTipoVinoController" class="tempranillo.controllers.buscarTipoVinoController">
+    </bean>
+    <bean id="enviarComentarioController" class="tempranillo.controllers.enviarComentarioController">
+        <property name="commandClass" value="tempranillo.entidades.ComentarioUsuario"/>
+        <property name="commandName" value="comentario"/>
+    </bean>
+    
+    <bean id="reportarErrorController" class="tempranillo.controllers.reportarErrorController">
+        <property name="commandClass" value="tempranillo.entidades.Reporte"/>
+        <property name="commandName" value="reporteerror"/>
+    </bean>
+
+    <bean id="verperfilController" class="tempranillo.controllers.VerPerfilUsuarioController">
+    </bean>
+
+    <bean id="verwishListController" class="tempranillo.controllers.whistlistUsuarioController">
+    </bean>
+
+    <bean id="vinosCatadosController" class="tempranillo.controllers.vinosCatadosController">
+    </bean>
+
+    <bean id="logoutController" class="tempranillo.controllers.LogOutController">
+    </bean>
+
+    <bean id="checkinController" class="tempranillo.controllers.checkinController">
+        <property name="commandClass" value="tempranillo.entidades.PruebaVino"/>
+        <property name="commandName" value="pruebavino"/>
+    </bean>
+
+    <bean id="makeloginController" class="tempranillo.controllers.makeloginController">
+        <property name="commandClass" value="tempranillo.entidades.Usuario"/>
+        <property name="commandName" value="login"/>
+    </bean>
+
+    <bean id="viewResolver"     class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+     p:prefix="/WEB-INF/jsp/"
+     p:suffix=".jsp" />
+   <!-- The index controller. -->
+
+    <bean id="usuController" class="tempranillo.controllers.UsuarioController" >
+        <property name="formView" value="altaUsuario"/>
+        <property name="successView" value="inicioUsuario" />
+        <property name="commandClass" value="tempranillo.entidades.Usuario"/>
+        <property name="commandName" value="usuario"/>
+        <property name="validator">
+            <bean class="tempranillo.validators.altaUsuarioValidator"/>
+        </property>
+    </bean>
+
+    <bean id="BusquedausuController" class="tempranillo.controllers.BusquedaUsuarioController" >
+   
+    </bean>
+
+    <bean id="nuevaBodegaController" class="tempranillo.controllers.NuevaBodegaController">
+   
+    </bean>
+
+    <bean id="inicializarPerfilUsuario" class="tempranillo.controllers.inicializarPerfilUsuario">
+   
+    </bean>
+
+    <bean id="altaBodegaController" class="tempranillo.controllers.AltaBodegaController">
+        <property name="commandClass" value="tempranillo.entidades.Bodega"/>
+        <property name="commandName" value="nuevabodega"/>
+        <property name="validator">
+            <bean class="tempranillo.validators.NuevaBodegaValidator"/>
+        </property>
+    </bean>
+
+    <bean id="cambiarPassword" class="tempranillo.controllers.cambiarPasswordController">
+        <property name="commandClass" value="tempranillo.entidades.Password"/>
+        <property name="commandName" value="nuevaPassword"/>
+    </bean>
+
+    <bean id="cambiarDatosUsuario" class="tempranillo.controllers.CambiarDatosUsuario">
+        <property name="commandClass" value="tempranillo.entidades.Usuario"/>
+        <property name="commandName" value="usuario"/>
+    </bean>
+
+    <bean id="actualizarVinoController" class="tempranillo.controllers.ActualizarVinoController">
+    </bean>
+
+    <bean id="cambiarNombreBodegaController" class="tempranillo.controllers.cambioNombreBodegaController">
+        <property name="commandClass" value="tempranillo.entidades.Bodega"/>
+        <property name="commandName" value="bodega"/>
+        <property name="validator">
+            <bean class="tempranillo.validators.NuevaBodegaValidator"/>
+        </property>
+    </bean>
+
+    <bean id="fileuploadController" class="tempranillo.controllers.FileUploadController" >
+        <property name="commandClass" value="tempranillo.modelo.FileUpload"/>
+        <property name="commandName" value="fileUploadForm"/>
+    </bean>
+
+    <bean id="vinosController" class="tempranillo.controllers.VinosController" >
+        <property name="formView" value="altaVino"/>
+        <property name="successView" value="infoVino" />
+        <property name="commandClass" value="tempranillo.entidades.Vino"/>
+        <property name="commandName" value="vino"/>
+        <property name="validator">
+            <bean class="tempranillo.validators.altaVinoValidator"/>
+        </property>
+    </bean>
+
+    <bean id="verloginController" class="tempranillo.controllers.logincontroller">
+    </bean>
+
+    <bean id="verregistroController" class="tempranillo.controllers.registroController">
+    </bean>
+
+    <bean id="makeregistroController" class="tempranillo.controllers.makeregistroController">
+        <property name="commandClass" value="tempranillo.entidades.Usuario"/>
+        <property name="commandName" value="login"/>
+        <property name="validator">
+            <bean class="tempranillo.validators.altaUsuarioValidator"/>
+        </property>
+    </bean>
+
+    <bean id="altaVinoBodegaController" class="tempranillo.controllers.AltaVinoBodegaController">
+        <property name="commandClass" value="tempranillo.entidades.AltaVinoBodega"/>
+        <property name="commandName" value="bodega"/>
+    </bean>
+
+    <bean id="buscarVinoController" class="tempranillo.controllers.BusquedaVinoController">
+        <property name="commandClass" value="tempranillo.entidades.BusquedaVino"/>
+        <property name="commandName" value="busquedavino"/>
+    </bean>
+
+    <bean id="buscarVinoIDController" class="tempranillo.controllers.BusquedaVinoIDController">
+    </bean>
+
+    <bean id="borrarBodegaController" class="tempranillo.controllers.BorrarBodegaController">
+    </bean>
+
+    <bean id="borrarVinoBodegaController" class="tempranillo.controllers.BorrarVinoDeBodegaController">
+    </bean>
+
+    <bean id="buscarVinosBodega" class="tempranillo.controllers.BusquedaVinosBodega">
+    </bean>
+
+    <bean name="AindexController"    class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+    p:viewName="login" />
+
+    <bean id="indexController" class="tempranillo.controllers.indexController">
+        <property name="commandClass" value="tempranillo.entidades.Usuario"/>
+        <property name="commandName" value="login"/>
+    </bean>
+   
+</beans>

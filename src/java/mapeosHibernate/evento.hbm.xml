@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.Evento" table="public.Tevento">
+    <id column="idevento" name="idevento">
+      <generator class="identity"/>
+    </id>
+    <property column="idestablecimiento" name="idestablecimiento" type="integer"/>
+    <property column="titulo" name="titulo" type="string"/>
+    <property column="descripcion" name="descripcion" type="string"/>
+    <property column="fechainicio" name="fechainicio" type="timestamp"/>
+    <property column="fechafin" name="fechafin" type="timestamp"/>
+     
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.sistemanotificaciones.NotificacionDB" table="public.tnotificacion">
+    <id column="idnotificacion" name="idnotificacion">
+      <generator class="identity"/>
+    </id>
+    <property column="idusuario" name="idusuario" type="integer"/>
+    <property column="fecha" name="fecha" type="date"/>
+    <property column="notificacion" name="notificacion" type="string"/>
+    <property column="xmlnotificacion" name="xmlnotificacion" type="tempranillo.utils.SQLXMLType"/>
+  </class>
+</hibernate-mapping>

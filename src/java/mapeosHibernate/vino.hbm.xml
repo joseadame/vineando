@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.Vino" table="public.Tvinos">
+    <id column="idvino" name="idvino">
+      <generator class="identity"/>
+    </id>
+    <property column="nombre" name="nombre" type="string"/>
+    <property column="tipovino" name="tipovino" type="string"/>
+    <property column="anio" name="anio" type="string"/>
+    <property column="variedad" name="variedad" type="string"/>
+    <property column="zona" name="zona" type="string"/>
+    <property column="pais" name="pais" type="string"/>
+    <property column="barcode" name="barcode" type="string"/>
+    <property column="idusuario" name="idusuario" type="int"/>
+    <property column="notamedia" name="notamedia" type="double"/>
+    <property column="numerovotaciones" name="numerovotaciones" type="int"/>
+    <property column="fechaalta" name="fechaalta" type="date"/>
+    <property column="bodega" name="bodega" type="string"/>
+    <property column="rutaimagen" name="rutaimagen" type="string"/>
+    <property column="status" name="status" type="string"/>
+    <property column="comentariocata" name="comentariocata" type="string"/>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.WishList" table="public.Twishlist">
+    <id column="idwishlist" name="idwishlist">
+      <generator class="identity"/>
+    </id>
+    <property column="idvino" name="idvino" type="integer"/>
+    <property column="idusuario" name="idusuario" type="integer"/>
+    <property column="fecha" name="fecha" type="timestamp"/>
+  </class>
+</hibernate-mapping>

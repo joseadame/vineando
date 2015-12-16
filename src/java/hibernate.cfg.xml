@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://5.56.60.84:5432/Garnacha</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">bacuslocus10</property>
+    <property name="show_sql">true</property>
+    <property name="hibernate.connection.useUnicode">true</property>
+    <property name="hibernate.connection.characterEncoding">utf8</property>
+    <property name="connection.provider_class">
+    org.hibernate.connection.C3P0ConnectionProvider
+    </property>
+<property name="c3p0.acquire_increment">1</property>
+<property name="c3p0.idle_test_period">100</property><!-- seconds -->
+<property name="c3p0.max_size">5</property>
+<property name="c3p0.max_statements">10</property>
+<property name="c3p0.min_size">3</property>
+<property name="c3p0.timeout">200</property><!-- seconds -->
+    <mapping resource="mapeosHibernate/usuario.hbm.xml"/>
+    <mapping resource="mapeosHibernate/vino.hbm.xml"/>
+    <mapping resource="mapeosHibernate/variedad.hbm.xml"/>
+    <mapping resource="mapeosHibernate/bodega.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Checkin.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Comentarios.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Votaciones.hbm.xml"/>
+    <mapping resource="mapeosHibernate/almacenvinos.hbm.xml"/>
+    <mapping resource="mapeosHibernate/WishList.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Amistad.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Seguimiento.hbm.xml"/>
+    <mapping resource="mapeosHibernate/media.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Reportes.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Logro.hbm.xml"/>
+    <mapping resource="mapeosHibernate/UsuariosLogros.hbm.xml"/>
+    <mapping resource="mapeosHibernate/notificacion.hbm.xml"/>
+    <mapping resource="mapeosHibernate/Notificacion_PA.hbm.xml"/>
+    <mapping resource="mapeosHibernate/almacen.hbm.xml"/>
+    <mapping resource="mapeosHibernate/evento.hbm.xml"/>
+    <mapping resource="mapeosHibernate/establecimiento.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

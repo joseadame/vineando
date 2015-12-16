@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="tempranillo.entidades.Amistad" table="public.Tamistad">
+    <id column="idamistad" name="idamistad">
+      <generator class="identity"/>
+    </id>
+    <property column="idusuario" name="idusuario" type="integer"/>
+    <property column="idamigo" name="idamigo" type="integer"/>
+    <property column="fecha" name="fecha" type="timestamp"/>
+    <property column="mensaje" name="mensaje" type="string"/>
+    <property column="estado" name="estado" type="integer"/>
+    
+  </class>
+</hibernate-mapping>
